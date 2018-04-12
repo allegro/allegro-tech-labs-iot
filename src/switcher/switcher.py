@@ -19,11 +19,11 @@ def main():
     if args['<stage_id>']:
         repo = git.Repo('.')
         cmd = repo.git
-        cmd.reset('\--hard HEAD')
+        cmd.reset('--hard', 'HEAD')
         cmd.clean('-fd')
         cmd.checkout('{}'.format(args['<stage_id>']))
-        cmd.reset('\--hard HEAD')
-        repo.active_branch
+        cmd.reset('--hard', 'HEAD')
+        cmd.pull()
 
 
 if __name__ == "__main__":

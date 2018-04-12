@@ -18,11 +18,12 @@ def main():
     args = docopt(__doc__, version='checker 0.1.0')
     if args['<stage_id>']:
         repo = git.Repo('.')
-        git = repo.git
-        git.reset('HEAD~3')
-        git.pull()
-        git.checkout('{}'.format(args['<stage_id>']))
-        repo.active_branch
+        cmd = repo.git
+        cmd.reset('--hard', 'HEAD')
+        cmd.clean('-fd')
+        cmd.checkout('{}'.format(args['<stage_id>']))
+        cmd.reset('--hard', 'HEAD')
+        cmd.pull()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,4 @@
+.idea/*
+src/switch_level.egg-info/*
+src/switcher/__pycache__/*
+

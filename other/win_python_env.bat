@@ -1,0 +1,1 @@
+set PATH=%PATH%;C:\Program Files (x86)\Python36-32\Scripts\;C:\Program Files (x86)\Python36-32\

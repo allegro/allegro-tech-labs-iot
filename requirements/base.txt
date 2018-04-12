@@ -1,0 +1,2 @@
+GitPython==2.1.9
+docopt==0.6.2

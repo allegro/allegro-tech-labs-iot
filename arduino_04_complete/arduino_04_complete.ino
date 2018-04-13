@@ -99,7 +99,7 @@ void setup() {
   Serial.println();
   Serial.print("Waiting for WiFi... ");
 
-  WiFiMulti.addAP("esp8266lab", "esp8266labs");
+  WiFiMulti.addAP("esp8266labs", "esp8266labs");
 
   while (WiFiMulti.run() != WL_CONNECTED) {
     Serial.print(".");

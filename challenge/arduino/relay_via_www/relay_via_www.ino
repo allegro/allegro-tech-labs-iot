@@ -12,7 +12,7 @@ ESP8266WebServer server(80);
 
 const char LAMP_PIN = D5;
 int state = 1;
-String message = "{\"State\": \"Unknown\"}";
+String message = "{\"State\": \"Off\"}";
 
 void handleRoot() {
   server.send(200, "text/plain", "Lamp switcher v1.0.0");

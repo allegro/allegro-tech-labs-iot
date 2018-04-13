@@ -3,7 +3,6 @@
 
 Usage:
   switch-level <stage_id>
-  switch-level reset
   switch-level (-h | --help)
   switch-level (-v|--version)
 
@@ -23,16 +22,10 @@ def main():
     if args['<stage_id>']:
         repo = git.Repo('.')
         cmd = repo.git
-        cmd.reset('--hard', 'HEAD')
-        cmd.clean('-fd')
+        if repo.index.diff(None):
+            cmd.reset('--hard', 'HEAD')
+            cmd.clean('-fd')
         cmd.checkout('{}'.format(args['<stage_id>']))
-        cmd.reset('--hard', 'HEAD')
-        cmd.pull()
-
-    if args['reset']:
-        repo = git.Repo('.')
-        cmd = repo.git
-        cmd.reset('--hard', 'HEAD')
         cmd.pull()
 
 

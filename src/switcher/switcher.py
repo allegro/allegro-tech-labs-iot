@@ -19,7 +19,7 @@ def main():
     if args['<stage_id>']:
         repo = git.Repo('.')
         cmd = repo.git
-        if not repo.index.diff(None):
+        if repo.index.diff(None):
             cmd.reset('--hard', 'HEAD')
             cmd.clean('-fd')
         cmd.checkout('{}'.format(args['<stage_id>']))

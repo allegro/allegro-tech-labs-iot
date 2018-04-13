@@ -8,7 +8,7 @@ print('Setup code...')
 led = machine.Pin(14, machine.Pin.OUT)
 led.off()
 thermometer = mds18x20.MDS18x20()
-wifi = mwifi.WiFi('esp8266lab', 'esp8266labs')
+wifi = mwifi.WiFi('esp8266labs', 'esp8266labs')
 print('Initial time: {}'.format(utime.localtime()))
 
 

@@ -7,6 +7,9 @@ Usage:
   switch-level (-h | --help)
   switch-level (-v|--version)
 
+Commands:
+  reset Reset all changes
+
 Options:
   -h --help             Show this screen.
   -v --version          Show version.

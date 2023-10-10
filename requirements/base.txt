@@ -1,2 +1,2 @@
-GitPython==2.1.9
+GitPython==3.1.37
 docopt==0.6.2
